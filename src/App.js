@@ -60,40 +60,39 @@ export default function App() {
     },
   ];
   return (
-    <div className="container">
-      <div className="title_wrapper"></div>
-      <Swiper
-        centeredSlides={false}
-        slidesPerView={3}
-        spaceBetween={0}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        className="mySwiper"
-      >
-        {news.map((x, i) => (
-          <SwiperSlide key={i}>
-            <div className="card">
-              <img src={x.image} alt="" />
-              <div className="card_content">
-                <div className="content">
-                  <span className="date">{x.date}</span>
-                  <span className="category">{x.category}</span>
-                  <h4 className="title">{x.title}</h4>
-                  <h4 className="updates">UPDATES {x.updates}</h4>
-                </div>
+    <Swiper
+      centeredSlides={false}
+      slidesPerView={3}
+      spaceBetween={0}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
+      pagination={{
+        el: ".swiper-pagination",
+        clickable: true,
+      }}
+      className="mySwiper"
+    >
+      {news.map((x, i) => (
+        <SwiperSlide key={i}>
+          <div className="card">
+            <img src={x.image} alt="" />
+            <div className="card_content">
+              <div className="content">
+                <span className="date">{x.date}</span>
+                <span className="category">{x.category}</span>
+                <h4 className="title">{x.title}</h4>
+                <h4 className="updates">UPDATES {x.updates}</h4>
               </div>
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+          </div>
+        </SwiperSlide>
+      ))}
+      <div class="swiper-pagination"></div>
+    </Swiper>
   );
 }

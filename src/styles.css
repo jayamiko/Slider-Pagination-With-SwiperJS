@@ -15,17 +15,18 @@ body {
 .mySwiper {
   display: flex;
   width: 85% !important;
-  height: 280px;
+  height: 350px;
+  margin-top: 200px;
 }
 
 .swiper-pagination {
-  padding: 25px;
+  padding: 40px;
   display: flex;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .swiper-pagination-bullet {
-  background: rgb(209 213 219);
+  background: silver;
   border-radius: 50% !important;
   opacity: 1;
   height: 10px !important;
@@ -44,13 +45,6 @@ body {
   background-size: cover;
   width: 300px;
   height: 400px;
-}
-
-@media (max-width: 768px) {
-  .swiper-slide {
-    width: 250px;
-    height: auto;
-  }
 }
 
 .card {
@@ -109,14 +103,6 @@ body {
   background-position: center;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  background-color: #000;
-  display: block;
-}
-
 .container .swiper-container {
   width: 70%;
   position: absolute;
@@ -126,13 +112,6 @@ body {
   transform: translateX(-50%);
   z-index: 2;
   padding-bottom: 3vw;
-}
-
-@media (max-width: 768px) {
-  .container .swiper-container {
-    bottom: -58vw;
-    padding-bottom: 8vw;
-  }
 }
 
 .swiper-pagination-fraction {
